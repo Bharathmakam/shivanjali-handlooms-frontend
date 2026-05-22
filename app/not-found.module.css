@@ -1,0 +1,72 @@
+.container {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.content {
+  text-align: center;
+  max-width: 500px;
+}
+
+.errorCode {
+  font-family: var(--font-playfair), serif;
+  font-size: 8rem;
+  color: #8b1538;
+  margin: 0;
+  line-height: 1;
+}
+
+.content h2 {
+  font-family: var(--font-playfair), serif;
+  font-size: 2rem;
+  color: #2d1b0e;
+  margin: 1rem 0;
+}
+
+.content p {
+  color: #6b5b4f;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.homeButton,
+.shopButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.homeButton {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.homeButton:hover {
+  background: #8b1538;
+}
+
+.shopButton {
+  background: transparent;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+}
+
+.shopButton:hover {
+  background: #1a1a1a;
+  color: #ffffff;
+}

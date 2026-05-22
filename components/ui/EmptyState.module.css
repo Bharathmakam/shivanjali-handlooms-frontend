@@ -1,0 +1,39 @@
+.container {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #666;
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary, #8b1538);
+  margin: 0 0 0.5rem;
+}
+
+.description {
+  margin: 0 0 1.5rem;
+  color: #666;
+}
+
+.action {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: var(--primary, #8b1538);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.action:hover {
+  background: var(--primary-dark, #6b1030);
+}

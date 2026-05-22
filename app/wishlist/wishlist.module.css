@@ -1,0 +1,169 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-family: var(--font-playfair), serif;
+  font-size: 2rem;
+  color: #2d1b0e;
+  margin: 0;
+}
+
+.clearButton {
+  background: none;
+  border: 1px solid #b22222;
+  color: #b22222;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.clearButton:hover {
+  background: #b22222;
+  color: #ffffff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+.removeButton {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1;
+  color: #666;
+}
+
+.removeButton:hover {
+  color: #b22222;
+}
+
+.imageLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  background: #f9f9f9;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.imagePlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #ccc;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.info {
+  padding: 1rem;
+}
+
+.info h3 {
+  font-family: var(--font-open-sans), sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+  color: #1a1a1a;
+}
+
+.price {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 1rem 0;
+}
+
+.addToCart {
+  width: 100%;
+  padding: 0.75rem;
+  background: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.addToCart:hover {
+  background: #8b1538;
+}
+
+.empty {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.empty h2 {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.8rem;
+  color: #2d1b0e;
+  margin: 0 0 1rem 0;
+}
+
+.empty p {
+  color: #6b5b4f;
+  margin: 0 0 2rem 0;
+}
+
+.shopButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #1a1a1a;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+
+.shopButton:hover {
+  background: #8b1538;
+}

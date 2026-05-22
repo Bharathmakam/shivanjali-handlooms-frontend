@@ -1,0 +1,107 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+  border-bottom: 2px solid #8b1538;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-family: var(--font-playfair), serif;
+  font-size: 3rem;
+  color: #2d1b0e;
+  margin: 0 0 1rem 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #6b5b4f;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section,
+.sectionAlt {
+  padding: 3rem 0;
+}
+
+.sectionAlt {
+  background: #fdf8f3;
+  margin: 0 -1.5rem;
+  padding: 3rem 1.5rem;
+}
+
+.content h2 {
+  font-family: var(--font-playfair), serif;
+  font-size: 2rem;
+  color: #2d1b0e;
+  margin: 0 0 1.5rem 0;
+}
+
+.content p {
+  color: #6b5b4f;
+  line-height: 1.8;
+  margin: 0 0 1rem 0;
+  font-size: 1.05rem;
+}
+
+.promises {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.promises li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e5e5;
+  color: #6b5b4f;
+  line-height: 1.6;
+}
+
+.promises li:last-child {
+  border-bottom: none;
+}
+
+.promises strong {
+  color: #2d1b0e;
+}
+
+.cta {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.cta h2 {
+  font-family: var(--font-playfair), serif;
+  font-size: 2rem;
+  color: #2d1b0e;
+  margin: 0 0 1rem 0;
+}
+
+.cta p {
+  color: #6b5b4f;
+  margin: 0 0 2rem 0;
+  font-size: 1.1rem;
+}
+
+.shopButton {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: #1a1a1a;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+
+.shopButton:hover {
+  background: #8b1538;
+}

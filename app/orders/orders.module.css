@@ -1,0 +1,126 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.container h1 {
+  font-family: 'Playfair Display', serif;
+  color: #2d1b0e;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #8b1538;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.loading, .empty {
+  text-align: center;
+  padding: 4rem;
+  color: #6b5b4f;
+}
+
+.empty a {
+  color: #8b1538;
+  font-weight: bold;
+}
+
+.orderList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.orderCard {
+  border: 1px solid #eee;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.orderHeader {
+  background-color: #fdf8f3;
+  padding: 1rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.label {
+  font-size: 0.7rem;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.value {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #2d1b0e;
+}
+
+.statusBadge {
+  background: #8b1538;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.orderBody {
+  padding: 1.5rem;
+}
+
+.orderBody h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #2d1b0e;
+}
+
+.itemList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.itemList li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f9f9f9;
+  font-size: 0.9rem;
+}
+
+.shippingInfo {
+  font-size: 0.85rem;
+  color: #6b5b4f;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.shippingInfo p {
+  margin-bottom: 0.3rem;
+}
+
+.trackLink {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #8b1538;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.trackLink:hover {
+  text-decoration: underline;
+}
+
+.pending { background: #f59e0b; }
+.confirmed { background: #3b82f6; }
+.processing { background: #8b5cf6; }
+.shipped { background: #06b6d4; }
+.delivered { background: #10b981; }
+.cancelled { background: #ef4444; }
+.returned { background: #6b7280; }

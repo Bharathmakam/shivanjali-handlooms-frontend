@@ -1,0 +1,69 @@
+.card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.orderId {
+  font-weight: 600;
+  color: var(--primary, #8b1538);
+  font-family: monospace;
+}
+
+.date {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.body p {
+  margin: 0;
+}
+
+.label {
+  font-weight: 600;
+  color: #666;
+}
+
+.trackLink {
+  color: var(--gold, #c9a84c);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.trackLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .body {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,264 @@
+.container h1 {
+  font-family: var(--font-playfair), serif;
+  font-size: 2rem;
+  color: #2d1b0e;
+  margin: 0 0 1.5rem 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.addButton {
+  padding: 0.75rem 1.5rem;
+  background: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.addButton:hover {
+  background: #8b1538;
+}
+
+.formModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.formContent {
+  background: #ffffff;
+  padding: 2rem;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.formContent h2 {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.5rem;
+  color: #2d1b0e;
+  margin: 0 0 1.5rem 0;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.inputGroup {
+  margin-bottom: 1rem;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: #2d1b0e;
+  font-size: 0.85rem;
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #e5e5e5;
+  font-size: 0.9rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: #8b1538;
+}
+
+.fieldError {
+  color: #b22222;
+  font-size: 0.75rem;
+  margin: 0.2rem 0 0 0;
+}
+
+.checkboxGroup {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.checkboxGroup label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #2d1b0e;
+  cursor: pointer;
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.cancelButton {
+  padding: 0.75rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid #8b1538;
+  color: #8b1538;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.cancelButton:hover {
+  background: #8b1538;
+  color: #ffffff;
+}
+
+.submitButton {
+  padding: 0.75rem 1.5rem;
+  background: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.submitButton:hover {
+  background: #8b1538;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #e5e5e5;
+  font-size: 0.9rem;
+}
+
+.filterSelect {
+  padding: 0.75rem;
+  border: 1px solid #e5e5e5;
+  font-size: 0.9rem;
+  min-width: 180px;
+}
+
+.table {
+  width: 100%;
+  background: #ffffff;
+  border-collapse: collapse;
+  border: 1px solid #e5e5e5;
+}
+
+.table th {
+  text-align: left;
+  padding: 0.75rem;
+  background: #f5f5f5;
+  font-size: 0.85rem;
+  color: #6b5b4f;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.inStock {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.outOfStock {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editButton {
+  padding: 0.4rem 0.8rem;
+  background: #3b82f6;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.editButton:hover {
+  background: #2563eb;
+}
+
+.deleteButton {
+  padding: 0.4rem 0.8rem;
+  background: #ef4444;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.deleteButton:hover {
+  background: #dc2626;
+}
+
+.empty {
+  text-align: center;
+  padding: 2rem;
+  color: #6b5b4f;
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem;
+  color: #6b5b4f;
+}
+
+@media (max-width: 768px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+}

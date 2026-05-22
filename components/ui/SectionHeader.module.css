@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-playfair, serif), serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary, #8b1538);
+  margin: 0;
+}
+
+.action {
+  padding: 0.4rem 1rem;
+  background: transparent;
+  border: 1px solid var(--gold, #c9a84c);
+  color: var(--gold, #c9a84c);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.action:hover {
+  background: var(--gold, #c9a84c);
+  color: #fff;
+}

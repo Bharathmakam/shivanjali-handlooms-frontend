@@ -1,0 +1,55 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.container h1 {
+  font-family: var(--font-playfair), serif;
+  font-size: 2.5rem;
+  color: #2d1b0e;
+  margin: 0 0 0.5rem 0;
+}
+
+.updated {
+  color: #6b5b4f;
+  font-size: 0.9rem;
+  margin: 0 0 2rem 0;
+}
+
+.container section {
+  margin-bottom: 2rem;
+}
+
+.container h2 {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.5rem;
+  color: #2d1b0e;
+  margin: 0 0 1rem 0;
+}
+
+.container p {
+  color: #6b5b4f;
+  line-height: 1.7;
+  margin: 0 0 1rem 0;
+}
+
+.container ul {
+  color: #6b5b4f;
+  line-height: 1.7;
+  padding-left: 1.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.container li {
+  margin-bottom: 0.5rem;
+}
+
+.container a {
+  color: #8b1538;
+  text-decoration: none;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}

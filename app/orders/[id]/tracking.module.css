@@ -1,0 +1,289 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #6b5b4f;
+  margin-bottom: 1rem;
+}
+
+.breadcrumb a {
+  color: #6b5b4f;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #8b1538;
+}
+
+.container h1 {
+  font-family: var(--font-playfair), serif;
+  font-size: 2rem;
+  color: #2d1b0e;
+  margin: 0 0 2rem 0;
+}
+
+.statusTracker {
+  background: #fdf8f3;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.steps::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: #e5e5e5;
+  z-index: 0;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.stepCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e5e5e5;
+  color: #6b5b4f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.stepActive .stepCircle {
+  background: #8b1538;
+  color: #ffffff;
+}
+
+.stepLabel {
+  font-size: 0.8rem;
+  color: #6b5b4f;
+  font-weight: 500;
+}
+
+.stepActive .stepLabel {
+  color: #1a1a1a;
+}
+
+.orderDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section {
+  background: #ffffff;
+  padding: 1.5rem;
+  border: 1px solid #e5e5e5;
+}
+
+.section h2 {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.2rem;
+  color: #2d1b0e;
+  margin: 0 0 1rem 0;
+}
+
+.section p {
+  color: #6b5b4f;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.section strong {
+  color: #2d1b0e;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.pending { background: #f59e0b; }
+.confirmed { background: #3b82f6; }
+.processing { background: #8b5cf6; }
+.shipped { background: #06b6d4; }
+.delivered { background: #10b981; }
+.cancelled { background: #ef4444; }
+.returned { background: #6b7280; }
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #6b5b4f;
+  font-size: 0.95rem;
+}
+
+.totals {
+  margin-top: 1rem;
+}
+
+.totals p {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+
+.totals hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 1rem 0;
+}
+
+.grandTotal {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 1.1rem;
+}
+
+.grandTotal span {
+  color: #1a1a1a;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cancelButton {
+  padding: 1rem 2rem;
+  background: #ef4444;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.cancelButton:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+.cancelButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.backButton,
+.supportButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.backButton {
+  background: transparent;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+}
+
+.backButton:hover {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.supportButton {
+  background: #25D366;
+  color: #ffffff;
+}
+
+.supportButton:hover {
+  background: #128C7E;
+}
+
+.loading,
+.notFound {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.loading p {
+  color: #6b5b4f;
+  font-size: 1.1rem;
+}
+
+.notFound h2 {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.8rem;
+  color: #2d1b0e;
+  margin-bottom: 2rem;
+}
+
+.backLink {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #1a1a1a;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+
+.backLink:hover {
+  background: #8b1538;
+}
+
+@media (max-width: 768px) {
+  .orderDetails {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .steps::before {
+    display: none;
+  }
+
+  .step {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}

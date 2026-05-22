@@ -1,0 +1,187 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #faf6f0 0%, #f5f0e8 100%);
+}
+
+.form {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.form h1 {
+  font-size: 2rem;
+  color: #2d1810;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.form > p {
+  text-align: center;
+  color: #6b5b4f;
+  margin: 0 0 2rem;
+  font-size: 0.9rem;
+}
+
+.inputGroup {
+  margin-bottom: 1.25rem;
+}
+
+.nameRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.nameRow .inputGroup {
+  margin-bottom: 0;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #2d1810;
+  font-size: 0.9rem;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #e5ddd3;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  background: #faf6f0;
+  color: #1a1a1a;
+  -webkit-text-fill-color: #1a1a1a;
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup input:-webkit-autofill:hover,
+.inputGroup input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 100px #faf6f0 inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  caret-color: #1a1a1a;
+}
+
+.inputGroup input::placeholder,
+.inputGroup textarea::placeholder {
+  color: #9ca3af;
+}
+
+.inputGroup input[type="password"] {
+  color: #1a1a1a;
+  -webkit-text-fill-color: #1a1a1a;
+}
+
+.passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.passwordWrapper input {
+  padding-right: 3rem;
+}
+
+.togglePassword {
+  position: absolute;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.togglePassword:hover {
+  color: #8b1538;
+}
+
+.togglePassword svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: #8b1538;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.error {
+  color: #ef4444;
+  background: #fef2f2;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.fieldError {
+  color: #ef4444;
+  font-size: 0.8rem;
+  margin: 0.4rem 0 0;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #8b1538 0%, #a81d45 100%);
+  color: #ffffff;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 50px;
+  margin-top: 1rem;
+  box-shadow: 0 4px 15px rgba(139, 21, 56, 0.3);
+}
+
+.loginButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 21, 56, 0.4);
+}
+
+.loginButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #6b5b4f;
+}
+
+.footerLink {
+  color: #8b1538;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+  color: #6b0f2a;
+}

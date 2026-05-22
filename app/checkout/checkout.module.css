@@ -1,0 +1,1512 @@
+.checkoutContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.checkoutContainer h1 {
+  font-size: 2.5rem;
+  color: var(--dark-brown);
+  margin: 0 0 0.5rem;
+}
+
+.checkoutContent {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.emptyCart {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.emptyCart h2 {
+  font-size: 2rem;
+  color: var(--dark-brown);
+  margin: 0 0 1rem;
+}
+
+.emptyCart p {
+  color: var(--warm-gray);
+  margin: 0 0 2rem;
+}
+
+.shopButton {
+  padding: 1rem 2.5rem;
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: all var(--transition-base);
+}
+
+.shopButton:hover {
+  background: var(--primary-dark);
+}
+
+.form {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--light-border);
+}
+
+.form h2 {
+  font-size: 1.4rem;
+  color: var(--dark-brown);
+  margin: 0 0 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--light-border);
+}
+
+.inputGroup {
+  margin-bottom: 1.25rem;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--dark-brown);
+  font-size: 0.9rem;
+}
+
+.inputGroup input,
+.inputGroup textarea,
+.inputGroup select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--light-border);
+  font-size: 0.95rem;
+  font-family: inherit;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-base);
+  background: var(--background);
+  color: #1a1a1a;
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup textarea:-webkit-autofill,
+.inputGroup select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--background) inset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+}
+
+.inputGroup textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.fieldError {
+  color: #ef4444;
+  font-size: 0.8rem;
+  margin: 0.4rem 0 0;
+}
+
+.paymentMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.paymentMethods label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--ivory);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-size: 0.95rem;
+  color: var(--dark);
+}
+
+.paymentMethods label:hover {
+  background: var(--cream);
+}
+
+.paymentMethods input[type="radio"] {
+  accent-color: var(--primary);
+  width: 18px;
+  height: 18px;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
+
+.error {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin: 0.5rem 0 0;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 1.2rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 15px rgba(139, 21, 56, 0.3);
+}
+
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 21, 56, 0.4);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.summary {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--light-border);
+  position: sticky;
+  top: 100px;
+}
+
+.summary h2 {
+  font-size: 1.4rem;
+  color: var(--dark-brown);
+  margin: 0 0 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--light-border);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--light-border);
+  font-size: 0.9rem;
+  color: var(--warm-gray);
+}
+
+.item:last-of-type {
+  border-bottom: none;
+}
+
+.totals {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--light-border);
+}
+
+.totals p {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  color: var(--warm-gray);
+  font-size: 0.95rem;
+}
+
+.totals hr {
+  border: none;
+  border-top: 1px solid var(--light-border);
+  margin: 1rem 0;
+}
+
+.grandTotal {
+  font-weight: 700;
+  color: var(--dark-brown);
+  font-size: 1.2rem;
+}
+
+.grandTotal span {
+  color: var(--primary);
+  font-size: 1.3rem;
+}
+
+@media (max-width: 1024px) {
+  .checkoutContent {
+    grid-template-columns: 1fr;
+  }
+
+  .summary {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkoutContainer {
+    padding: 2rem 1rem;
+  }
+
+  .form {
+    padding: 1.5rem;
+  }
+}
