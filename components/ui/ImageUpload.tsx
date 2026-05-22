@@ -28,7 +28,7 @@ export default function ImageUpload({ value = [], onChange, maxFiles = 5 }: Imag
     formData.append('file', file);
     formData.append('folder', '/products');
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001'}/imagekit/upload`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001'}/upload`, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${token}`,
