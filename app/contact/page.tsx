@@ -117,7 +117,7 @@ export default function ContactPage() {
           </div>
           <div className={styles.infoItem}>
             <h3>Business Hours</h3>
-            <p>Monday - Saturday: 9:00 AM - 7:00 PM<br />Sunday: 10:00 AM - 4:00 PM</p>
+            <p>Monday - Saturday: 11:00 AM - 9:00 PM<br />Sunday: 2:00 PM - 9:00 PM</p>
           </div>
         </div>
       </div>
