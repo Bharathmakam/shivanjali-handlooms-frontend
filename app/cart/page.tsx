@@ -6,7 +6,7 @@ import { useCart } from '@/context/CartContext';
 import styles from './cart.module.css';
 
 export default function CartPage() {
-  const { items, removeItem, updateQuantity, toggleFallPico, subtotal, gst, shippingCost, total, clearCart } = useCart();
+  const { items, removeItem, updateQuantity, subtotal, shippingCost, total, clearCart } = useCart();
 
   if (items.length === 0) {
     return (
@@ -59,25 +59,12 @@ export default function CartPage() {
                       +
                     </button>
                   </div>
-
-                  <label className={styles.fallPicoToggle}>
-                    <input
-                      type="checkbox"
-                      checked={item.fallPico}
-                      onChange={(e) => toggleFallPico(item.id, e.target.checked)}
-                    />
-                    Add Fall & Pico (+₹450)
-                  </label>
                 </div>
-
-                {item.fallPico && (
-                  <p className={styles.disclaimer}>* Non-returnable with Fall & Pico service</p>
-                )}
               </div>
 
               <div className={styles.itemTotal}>
                 <p className={styles.totalPrice}>
-                  ₹{((item.price + item.fallPicoPrice) * item.quantity).toLocaleString()}
+                  ₹{(item.price * item.quantity).toLocaleString()}
                 </p>
                 <button
                   className={styles.removeButton}
@@ -101,10 +88,6 @@ export default function CartPage() {
             <span>₹{subtotal.toLocaleString()}</span>
           </div>
           <div className={styles.summaryRow}>
-            <span>GST</span>
-            <span>₹{gst.toLocaleString(undefined, { maximumFractionDigits: 2 })}</span>
-          </div>
-          <div className={styles.summaryRow}>
             <span>Shipping</span>
             <span>{shippingCost === 0 ? 'Free' : `₹${shippingCost}`}</span>
           </div>
@@ -114,7 +97,7 @@ export default function CartPage() {
           <hr />
           <div className={styles.summaryRow}>
             <span className={styles.totalLabel}>Total</span>
-            <span className={styles.totalValue}>₹{total.toLocaleString(undefined, { maximumFractionDigits: 2 })}</span>
+            <span className={styles.totalValue}>₹{total.toLocaleString()}</span>
           </div>
           <Link href="/checkout" className={styles.checkoutButton}>
             Proceed to Checkout

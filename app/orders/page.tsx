@@ -73,7 +73,7 @@ export default function OrdersPage() {
                 <ul className={styles.itemList}>
                   {order.items.map((item, idx) => (
                     <li key={idx}>
-                      {item.name} {item.fallPico ? '(with Fall & Pico)' : ''} — ₹{item.price} × {item.quantity}
+                      {item.name} — ₹{item.price} × {item.quantity}
                     </li>
                   ))}
                 </ul>

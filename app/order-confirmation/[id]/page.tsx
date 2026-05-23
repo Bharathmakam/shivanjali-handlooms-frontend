@@ -81,8 +81,8 @@ export default function OrderConfirmationPage() {
             <h2>Items</h2>
             {order.items.map((item) => (
               <div key={item.id || item.productId} className={styles.item}>
-                <span>{item.name} {item.fallPico ? '+ Fall/Pico' : ''} × {item.quantity}</span>
-                <span>₹{((item.price + item.fallPicoPrice) * item.quantity).toLocaleString()}</span>
+                <span>{item.name} × {item.quantity}</span>
+                <span>₹{(item.price * item.quantity).toLocaleString()}</span>
               </div>
             ))}
           </div>
@@ -105,7 +105,7 @@ export default function OrderConfirmationPage() {
             <h2>Order Total</h2>
             <div className={styles.totals}>
               <p>Subtotal: <span>₹{order.subtotal.toLocaleString()}</span></p>
-              <p>GST: <span>₹{order.gst.toLocaleString()}</span></p>
+              <p>Shipping: <span>{order.shippingCost === 0 ? 'Free' : `₹${order.shippingCost}`}</span></p>
               <hr />
               <p className={styles.grandTotal}>Total: <span>₹{order.total.toLocaleString()}</span></p>
             </div>

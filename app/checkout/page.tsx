@@ -59,7 +59,7 @@ declare global {
 
 export default function CheckoutPage() {
   const router = useRouter();
-  const { items, subtotal, gst, shippingCost, total, clearCart } = useCart();
+  const { items, subtotal, shippingCost, total, clearCart } = useCart();
   const { user } = useAuth();
   const [codStatus, setCodStatus] = useState<CodEligibilityResponse>({
     available: true,
@@ -236,8 +236,6 @@ export default function CheckoutPage() {
       name: item.name,
       price: item.price,
       quantity: item.quantity,
-      fallPico: item.fallPico,
-      fallPicoPrice: item.fallPicoPrice,
     }));
 
     const orderData = {
@@ -252,7 +250,6 @@ export default function CheckoutPage() {
       },
       subtotal,
       shippingCost,
-      gst,
       total,
     };
 
@@ -399,21 +396,16 @@ export default function CheckoutPage() {
           {items.map((item) => (
             <div key={item.id} className={styles.item}>
               <span>
-                {item.name} {item.fallPico ? "+ Fall/Pico" : ""} ×{" "}
-                {item.quantity}
+                {item.name} × {item.quantity}
               </span>
               <span>
-                ₹
-                {((item.price + item.fallPicoPrice) * item.quantity).toFixed(2)}
+                ₹{(item.price * item.quantity).toFixed(2)}
               </span>
             </div>
           ))}
           <div className={styles.totals}>
             <p>
               Subtotal: <span>₹{subtotal.toFixed(2)}</span>
-            </p>
-            <p>
-              GST: <span>₹{gst.toFixed(2)}</span>
             </p>
             <p>
               Shipping:{" "}

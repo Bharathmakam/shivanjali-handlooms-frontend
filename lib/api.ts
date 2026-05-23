@@ -65,8 +65,6 @@ type BackendOrder = Omit<
   | "items"
   | "subtotal"
   | "shippingCost"
-  | "gst"
-  | "gstAmount"
   | "discountAmount"
   | "total"
   | "paymentMethod"
@@ -84,8 +82,6 @@ type BackendOrder = Omit<
   items?: unknown;
   subtotal?: number | string | null;
   shippingCost?: number | string | null;
-  gst?: number | string | null;
-  gstAmount?: number | string | null;
   discountAmount?: number | string | null;
   total?: number | string | null;
   paymentMethod?: string | null;
@@ -157,11 +153,6 @@ function normalizeOrderItems(items: unknown): OrderItem[] {
       category: typeof raw.category === "string" ? raw.category : null,
       price: toNumber(raw.price),
       quantity: toNumber(raw.quantity, 1),
-      fallPico: Boolean(raw.fallPico),
-      fallPicoPrice: toNumber(raw.fallPicoPrice),
-      gstRate: raw.gstRate === undefined ? undefined : toNumber(raw.gstRate),
-      gstAmount:
-        raw.gstAmount === undefined ? undefined : toNumber(raw.gstAmount),
     };
   });
 }
@@ -195,8 +186,6 @@ function normalizeShippingAddress(order: BackendOrder): ShippingAddress {
 
 function normalizeOrder(order: BackendOrder): Order {
   const shippingAddress = normalizeShippingAddress(order);
-  const gst = toNumber(order.gst ?? order.gstAmount);
-  const paymentId = order.razorpayPaymentId || order.paymentId || null;
 
   return {
     ...order,
@@ -214,14 +203,12 @@ function normalizeOrder(order: BackendOrder): Order {
     paymentMethod: (order.paymentMethod || "RAZORPAY") as PaymentMethod,
     subtotal: toNumber(order.subtotal),
     shippingCost: toNumber(order.shippingCost),
-    gst,
-    gstAmount: toNumber(order.gstAmount ?? gst),
     discountAmount: toNumber(order.discountAmount),
     total: toNumber(order.total),
     status: (order.status || "PENDING") as OrderStatus,
     razorpayOrderId: order.razorpayOrderId || null,
-    razorpayPaymentId: paymentId,
-    paymentId,
+    razorpayPaymentId: order.razorpayPaymentId || order.paymentId || null,
+    paymentId: order.razorpayPaymentId || order.paymentId || null,
     awbNumber: order.awbNumber || null,
     createdAt: order.createdAt || new Date().toISOString(),
     updatedAt: order.updatedAt,
@@ -481,22 +468,19 @@ export async function getCart(): Promise<CartResponse> {
 export async function addToCart(
   productId: string,
   quantity: number,
-  fallPico: boolean,
 ): Promise<CartResponse> {
   return apiFetch<CartResponse>(`${API_URL}/cart/items`, {
     method: "POST",
-    body: JSON.stringify({ productId, quantity, fallPico }),
+    body: JSON.stringify({ productId, quantity }),
   });
 }
 
 export async function updateCartItem(
   cartItemId: string,
   quantity?: number,
-  fallPico?: boolean,
 ): Promise<CartResponse> {
   const body: Record<string, unknown> = {};
   if (quantity !== undefined) body.quantity = quantity;
-  if (fallPico !== undefined) body.fallPico = fallPico;
   return apiFetch<CartResponse>(`${API_URL}/cart/items/${cartItemId}`, {
     method: "PATCH",
     body: JSON.stringify(body),
@@ -518,7 +502,7 @@ export async function clearCart(): Promise<CartResponse> {
 }
 
 export async function mergeCartItems(
-  items: { productId: string; quantity: number; fallPico: boolean }[],
+  items: { productId: string; quantity: number }[],
 ): Promise<CartResponse> {
   return apiFetch<CartResponse>(`${API_URL}/cart/merge`, {
     method: "POST",

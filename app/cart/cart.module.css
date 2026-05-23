@@ -164,33 +164,6 @@
   font-weight: 500;
 }
 
-.fallPicoToggle {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.85rem;
-  color: var(--warm-gray);
-  cursor: pointer;
-  padding: 0.5rem 0.8rem;
-  background: var(--ivory);
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-base);
-}
-
-.fallPicoToggle:hover {
-  background: var(--cream);
-}
-
-.fallPicoToggle input {
-  accent-color: var(--primary);
-}
-
-.disclaimer {
-  font-size: 0.75rem;
-  color: #ef4444;
-  margin: 0.5rem 0 0;
-  font-style: italic;
-}
 
 .itemTotal {
   display: flex;

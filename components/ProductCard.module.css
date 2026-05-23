@@ -198,46 +198,9 @@
   margin: 0;
 }
 
-.fallPicoNote {
-  font-size: 0.7rem;
-  color: var(--warm-gray-light);
-  font-style: italic;
-}
-
 .services {
   margin-top: auto;
   margin-bottom: 0.75rem;
-}
-
-.fallPicoLabel {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.78rem;
-  color: var(--warm-gray);
-  cursor: pointer;
-  padding: 0.5rem 0.6rem;
-  background: var(--ivory);
-  border-radius: 8px;
-  transition: all 0.2s ease;
-}
-
-.fallPicoLabel:hover {
-  background: var(--cream);
-}
-
-.fallPicoLabel input[type="checkbox"] {
-  accent-color: var(--primary);
-  width: 15px;
-  height: 15px;
-  cursor: pointer;
-}
-
-.disclaimer {
-  font-size: 0.7rem;
-  color: #ef4444;
-  margin: 0 0 0.75rem;
-  font-style: italic;
 }
 
 .addToCart {

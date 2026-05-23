@@ -7,26 +7,8 @@ import { useAuth } from './AuthContext';
 
 const CartContext = createContext<CartContextType | null>(null);
 
-const FALL_PICO_PRICE = 450;
 const FREE_SHIPPING_THRESHOLD = 5000;
 const STANDARD_SHIPPING_COST = 99;
-
-function getGstRate(basePrice: number, servicePrice: number, isHandloom: boolean): number {
-  const totalValue = basePrice + servicePrice;
-  let gstRate = 5;
-
-  if (servicePrice > 0) {
-    if (totalValue > 2500) {
-      gstRate = 18;
-    } else if (totalValue > 1000) {
-      gstRate = 12;
-    }
-  } else if (!isHandloom && totalValue > 1000) {
-    gstRate = 12;
-  }
-
-  return gstRate;
-}
 
 function getShippingCost(subtotal: number): number {
   return subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : STANDARD_SHIPPING_COST;
@@ -59,8 +41,6 @@ function mapServerItemToClient(item: ServerCartItem): CartItem {
     price: item.product.price,
     image: item.product.images?.[0] || '',
     quantity: item.quantity,
-    fallPico: item.fallPico,
-    fallPicoPrice: item.fallPicoPrice,
     isHandloom: item.product.isHandloom,
     itemTotal: item.itemTotal,
   };
@@ -70,7 +50,6 @@ function mapClientToServerItem(item: CartItem) {
   return {
     productId: item.productId,
     quantity: item.quantity,
-    fallPico: item.fallPico,
   };
 }
 
@@ -142,10 +121,10 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
     }
   }, [user]);
 
-  const addItem = useCallback((product: Product, quantity = 1, fallPico = false) => {
+  const addItem = useCallback((product: Product, quantity = 1) => {
     setItems((prev) => {
       const existingIndex = prev.findIndex(
-        (item) => item.productId === product.id && item.fallPico === fallPico
+        (item) => item.productId === product.id
       );
 
       if (existingIndex >= 0) {
@@ -166,15 +145,13 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
           price: product.price,
           image: product.images?.[0] || '',
           quantity,
-          fallPico,
-          fallPicoPrice: fallPico ? FALL_PICO_PRICE : 0,
           isHandloom: product.isHandloom ?? true,
         },
       ];
     });
 
     if (user) {
-      callApi(() => apiAddToCart(product.id, quantity, fallPico));
+      callApi(() => apiAddToCart(product.id, quantity));
     }
   }, [user, callApi]);
 
@@ -203,24 +180,6 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
     }
   }, [user, callApi, removeItem]);
 
-  const toggleFallPico = useCallback((cartItemId: string, enabled: boolean) => {
-    setItems((prev) =>
-      prev.map((item) =>
-        item.id === cartItemId
-          ? {
-              ...item,
-              fallPico: enabled,
-              fallPicoPrice: enabled ? FALL_PICO_PRICE : 0,
-            }
-          : item
-      )
-    );
-
-    if (user) {
-      callApi(() => updateCartItem(cartItemId, undefined, enabled));
-    }
-  }, [user, callApi]);
-
   const clearCart = useCallback(() => {
     setItems([]);
 
@@ -248,17 +207,12 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
   const itemCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
   const subtotal = items.reduce(
-    (sum, item) => sum + (item.price + item.fallPicoPrice) * item.quantity,
+    (sum, item) => sum + item.price * item.quantity,
     0
   );
 
-  const gst = items.reduce((sum, item) => {
-    const rate = getGstRate(item.price, item.fallPicoPrice, item.isHandloom ?? true);
-    return sum + ((item.price + item.fallPicoPrice) * item.quantity * rate) / 100;
-  }, 0);
-
   const effectiveShipping = user ? shippingCost : getShippingCost(subtotal);
-  const total = subtotal + gst + effectiveShipping;
+  const total = subtotal + effectiveShipping;
 
   return (
     <CartContext.Provider
@@ -267,12 +221,10 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
         addItem,
         removeItem,
         updateQuantity,
-        toggleFallPico,
         clearCart,
         syncCart,
         itemCount,
         subtotal,
-        gst,
         shippingCost: effectiveShipping,
         total,
       }}

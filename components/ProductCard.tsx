@@ -12,21 +12,16 @@ interface ProductCardProps {
   product: Product;
 }
 
-const FALL_PICO_PRICE = 450;
-
 const ProductCard = ({ product }: ProductCardProps) => {
   const { addItem } = useCart();
   const { addItem: addWishlist, removeItem: removeWishlist, isInWishlist } = useWishlist();
-  const [fallPico, setFallPico] = useState(false);
   const [added, setAdded] = useState(false);
   const [imgLoaded, setImgLoaded] = useState(false);
-
-  const totalPrice = fallPico ? product.price + FALL_PICO_PRICE : product.price;
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    addItem(product, 1, fallPico);
+    addItem(product, 1);
     setAdded(true);
     setTimeout(() => setAdded(false), 1500);
   };
@@ -85,25 +80,8 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <span className={styles.category}>{product.category}</span>
         <h3>{product.name}</h3>
         <div className={styles.priceRow}>
-          <p className={styles.price}>₹{totalPrice.toLocaleString()}</p>
-          {fallPico && <span className={styles.fallPicoNote}>+ Fall & Pico</span>}
+          <p className={styles.price}>₹{product.price.toLocaleString()}</p>
         </div>
-
-        <div className={styles.services}>
-          <label className={styles.fallPicoLabel}>
-            <input
-              type="checkbox"
-              checked={fallPico}
-              onChange={(e) => setFallPico(e.target.checked)}
-              onClick={(e) => e.stopPropagation()}
-            />
-            <span>Fall & Pico (+₹{FALL_PICO_PRICE})</span>
-          </label>
-        </div>
-
-        {fallPico && (
-          <p className={styles.disclaimer}>* Non-returnable with this service</p>
-        )}
 
         <button
           className={`${styles.addToCart} ${added ? styles.added : ''}`}

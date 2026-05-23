@@ -45,8 +45,6 @@ export interface CartItem {
   price: number;
   image: string;
   quantity: number;
-  fallPico: boolean;
-  fallPicoPrice: number;
   isHandloom?: boolean;
   itemTotal?: number;
 }
@@ -63,8 +61,6 @@ export interface ServerCartItem {
     isHandloom: boolean;
   };
   quantity: number;
-  fallPico: boolean;
-  fallPicoPrice: number;
   itemTotal: number;
 }
 
@@ -73,7 +69,6 @@ export interface CartResponse {
   items: ServerCartItem[];
   itemCount: number;
   subtotal: number;
-  gst: number;
   shippingCost: number;
   total: number;
 }
@@ -109,10 +104,6 @@ export interface OrderItem {
   category?: string | null;
   price: number;
   quantity: number;
-  fallPico: boolean;
-  fallPicoPrice: number;
-  gstRate?: number;
-  gstAmount?: number;
 }
 
 export type OrderStatus =
@@ -139,8 +130,6 @@ export interface Order {
   paymentMethod: PaymentMethod;
   subtotal: number;
   shippingCost?: number;
-  gst: number;
-  gstAmount?: number;
   discountAmount?: number;
   total: number;
   status: OrderStatus;
@@ -182,15 +171,13 @@ export interface AuthContextType {
 
 export interface CartContextType {
   items: CartItem[];
-  addItem: (product: Product, quantity?: number, fallPico?: boolean) => void;
+  addItem: (product: Product, quantity?: number) => void;
   removeItem: (cartItemId: string) => void;
   updateQuantity: (cartItemId: string, quantity: number) => void;
-  toggleFallPico: (cartItemId: string, enabled: boolean) => void;
   clearCart: () => void;
   syncCart: () => Promise<void>;
   itemCount: number;
   subtotal: number;
-  gst: number;
   shippingCost: number;
   total: number;
 }

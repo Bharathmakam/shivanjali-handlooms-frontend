@@ -19,10 +19,7 @@ export default function ProductPage() {
   const [loading, setLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
-  const [fallPico, setFallPico] = useState(false);
   const [added, setAdded] = useState(false);
-
-  const FALL_PICO_PRICE = 450;
 
   useEffect(() => {
     async function loadProduct() {
@@ -65,10 +62,10 @@ export default function ProductPage() {
     );
   }
 
-  const totalPrice = (product.price + (fallPico ? FALL_PICO_PRICE : 0)) * quantity;
+  const totalPrice = product.price * quantity;
 
   const handleAddToCart = () => {
-    addItem(product, quantity, fallPico);
+    addItem(product, quantity);
     setAdded(true);
     setTimeout(() => setAdded(false), 1500);
   };
@@ -173,20 +170,6 @@ export default function ProductPage() {
                 +
               </button>
             </div>
-          </div>
-
-          <div className={styles.services}>
-            <label className={styles.fallPicoToggle}>
-              <input
-                type="checkbox"
-                checked={fallPico}
-                onChange={(e) => setFallPico(e.target.checked)}
-              />
-              Add Fall & Pico Service (+₹{FALL_PICO_PRICE})
-            </label>
-            {fallPico && (
-              <p className={styles.disclaimer}>* This item will be non-returnable with Fall & Pico service</p>
-            )}
           </div>
 
           <button
