@@ -1,26 +1,25 @@
 'use client';
 
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 import type { AuthContextType, User, AuthResponse } from '@/types';
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
-function getInitialUser(): User | null {
-  if (typeof window === 'undefined') return null;
-  try {
-    const saved = localStorage.getItem('user');
-    return saved ? JSON.parse(saved) : null;
-  } catch { return null; }
-}
-
-function getInitialToken(): string | null {
-  if (typeof window === 'undefined') return null;
-  return localStorage.getItem('token');
-}
-
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const [user, setUser] = useState<User | null>(getInitialUser);
-  const [token, setToken] = useState<string | null>(getInitialToken);
+  const [user, setUser] = useState<User | null>(null);
+  const [token, setToken] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  // Read from localStorage AFTER mounting to avoid hydration mismatch
+  useEffect(() => {
+    try {
+      const savedUser = localStorage.getItem('user');
+      const savedToken = localStorage.getItem('token');
+      if (savedUser) setUser(JSON.parse(savedUser));
+      if (savedToken) setToken(savedToken);
+    } catch { /* ignore */ }
+    setMounted(true);
+  }, []);
 
   const login = (data: AuthResponse) => {
     setUser(data.user);
@@ -37,7 +36,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, token, login, logout }}>
+    <AuthContext.Provider value={{ user, token, login, logout, mounted }}>
       {children}
     </AuthContext.Provider>
   );

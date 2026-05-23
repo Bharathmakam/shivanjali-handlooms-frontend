@@ -177,6 +177,7 @@ export interface AuthContextType {
   token: string | null;
   login: (data: AuthResponse) => void;
   logout: () => void;
+  mounted: boolean;
 }
 
 export interface CartContextType {

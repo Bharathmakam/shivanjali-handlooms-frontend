@@ -9,7 +9,7 @@ import { useWishlist } from '@/context/WishlistContext';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
-  const { user } = useAuth();
+  const { user, mounted } = useAuth();
   const { itemCount } = useCart();
   const { items: wishlistItems } = useWishlist();
   const pathname = usePathname();
@@ -89,14 +89,14 @@ const Navbar = () => {
               {itemCount > 0 && <span className={styles.iconCount}>{itemCount}</span>}
             </Link>
 
-            {user ? (
+            {mounted && user ? (
               <Link href="/dashboard" className={styles.userBtn}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
                   <circle cx="12" cy="7" r="4"/>
                 </svg>
               </Link>
-            ) : (
+            ) : mounted && !user ? (
               <Link href="/login" className={styles.loginBtn}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
@@ -104,6 +104,12 @@ const Navbar = () => {
                   <line x1="15" y1="12" x2="3" y2="12"/>
                 </svg>
               </Link>
+            ) : (
+              <span className={styles.iconBtn} style={{ visibility: 'hidden' }} aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </span>
             )}
           </div>
         </div>
