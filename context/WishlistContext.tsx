@@ -23,9 +23,19 @@ function saveWishlistToStorage(items: WishlistItem[]): void {
 }
 
 export const WishlistProvider = ({ children }: { children: React.ReactNode }) => {
-  const [items, setItems] = useState<WishlistItem[]>(getWishlistFromStorage);
+  const [items, setItems] = useState<WishlistItem[]>([]);
   const { user } = useAuth();
   const syncAttempted = useRef(false);
+  const [wishlistHydrated, setWishlistHydrated] = useState(false);
+
+  // Hydrate wishlist from localStorage after mount to avoid hydration mismatch
+  useEffect(() => {
+    const stored = getWishlistFromStorage();
+    if (stored.length > 0) {
+      setItems(stored);
+    }
+    setWishlistHydrated(true);
+  }, []);
 
   useEffect(() => {
     saveWishlistToStorage(items);
@@ -33,7 +43,7 @@ export const WishlistProvider = ({ children }: { children: React.ReactNode }) =>
 
   // Sync from backend when user logs in
   useEffect(() => {
-    if (!user) {
+    if (!user || !wishlistHydrated) {
       syncAttempted.current = false;
       return;
     }

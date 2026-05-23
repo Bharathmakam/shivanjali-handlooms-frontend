@@ -76,12 +76,22 @@ function mapClientToServerItem(item: CartItem) {
 
 export const CartProvider = ({ children }: { children: React.ReactNode }) => {
   const { user } = useAuth();
-  const [items, setItems] = useState<CartItem[]>(getCartFromStorage);
+  const [items, setItems] = useState<CartItem[]>([]);
   const [shippingCost, setShippingCost] = useState(0);
   const syncAttempted = useRef(false);
+  const [cartHydrated, setCartHydrated] = useState(false);
+
+  // Hydrate cart from localStorage after mount to avoid hydration mismatch
+  useEffect(() => {
+    const stored = getCartFromStorage();
+    if (stored.length > 0) {
+      setItems(stored);
+    }
+    setCartHydrated(true);
+  }, []);
 
   useEffect(() => {
-    if (!user) {
+    if (!user || !cartHydrated) {
       syncAttempted.current = false;
       return;
     }

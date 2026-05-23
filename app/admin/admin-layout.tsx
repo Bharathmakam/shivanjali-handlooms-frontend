@@ -13,17 +13,21 @@ export default function AdminLayout({
   const router = useRouter();
   const pathname = usePathname();
   const isLoginRoute = pathname === "/admin";
-  const [authenticated, setAuthenticated] = useState(() => {
-    if (typeof window === "undefined") return false;
-    if (isLoginRoute) return true;
-    return localStorage.getItem("adminAuthenticated") === "true";
-  });
+  const [authenticated, setAuthenticated] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  // Read from localStorage AFTER mounting to avoid hydration mismatch
+  useEffect(() => {
+    const isAdminAuth = localStorage.getItem("adminAuthenticated") === "true";
+    setAuthenticated(isAdminAuth);
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
-    if (!isLoginRoute && !authenticated) {
+    if (mounted && !isLoginRoute && !authenticated) {
       router.push("/admin");
     }
-  }, [authenticated, isLoginRoute, router]);
+  }, [mounted, authenticated, isLoginRoute, router]);
 
   const handleLogout = () => {
     localStorage.removeItem("adminAuthenticated");
@@ -36,6 +40,11 @@ export default function AdminLayout({
 
   if (isLoginRoute) {
     return <>{children}</>;
+  }
+
+  // Don't render admin layout until we know auth state (prevents hydration mismatch + flash)
+  if (!mounted) {
+    return null;
   }
 
   if (!authenticated) {
